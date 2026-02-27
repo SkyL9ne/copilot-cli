@@ -35,7 +35,6 @@ $dependency = @"
 # Remove existing top-level Dependencies block (if any), then insert ours
 
 $content = $content -replace '(?m)^Dependencies:\r?\n([ ]+.+\r?\n)*', ''
-          
 $content = $content -replace '(?m)^Installers:', "$dependency`nInstallers:"
           
 Set-Content -Path $installerManifest -Value $content
